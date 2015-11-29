@@ -6,7 +6,6 @@
   app.controller('myCtrl', function($scope, $http) {
     $scope.modal = {};
     $scope.tasks = [];
-    localStorage["tasks"] = '';
     if (typeof localStorage.tasks !== 'undefined' && localStorage.tasks !== '') {
       $scope.tasks = JSON.parse(localStorage.tasks);
     }
