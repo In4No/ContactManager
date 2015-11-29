@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .section:before, .card-ctrl:before, .modal-ctrl:before, .modal-name-wrpr:before, .modal-desc-wrpr:before, .cf:after, .section:after, .card-ctrl:after, .modal-ctrl:after, .modal-name-wrpr:after, .modal-desc-wrpr:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after, .section:after, .card-ctrl:after, .modal-ctrl:after, .modal-name-wrpr:after, .modal-desc-wrpr:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf, .section, .card-ctrl, .modal-ctrl, .modal-name-wrpr, .modal-desc-wrpr {
+  *zoom: 1; }
+
+body {
+  background-color: #666;
+  color: #E8E5E5;
+  font-family: sans-serif; }
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #424242;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  line-height: 40px; }
+
+.section {
+  padding: 20px;
+  width: calc(100% - 40px);
+  box-sizing: content-box; }
+
+.section-header {
+  display: inline-block;
+  text-align: left;
+  font-size: 30px;
+  width: 150px;
+  height: 40px; }
+
+.section-action-btn {
+  display: inline-block;
+  text-align: right;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer; }
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 20px;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid; }
+
+.card-ctrl {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; }
+  .card-ctrl div {
+    float: left;
+    margin-left: 20px;
+    cursor: pointer; }
+
+.card-desc-wrpr {
+  overflow: hidden; }
+
+.card-name, .card-desc, .card-status {
+  margin: 10px 0 5px;
+  font-size: 20px; }
+  .card-name div, .card-desc div, .card-status div {
+    font-size: 18px; }
+
+.modal {
+  position: fixed;
+  width: 40%;
+  height: 250px;
+  background-color: #E8E5E5;
+  margin-top: 10vh;
+  margin-left: 30%;
+  z-index: 10;
+  color: #666; }
+
+.modal-ctrl {
+  position: absolute;
+  bottom: 20px;
+  right: 0; }
+  .modal-ctrl div {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid;
+    margin-right: 20px;
+    float: left; }
+
+.modal-hdr {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 20px auto; }
+
+.modal-name-wrpr, .modal-desc-wrpr {
+  margin-left: 20px;
+  font-size: 18px;
+  margin-bottom: 20px; }
+  .modal-name-wrpr input, .modal-desc-wrpr input {
+    float: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 60%; }
+
+.modal-name, .modal-desc {
+  min-width: 30%;
+  float: left; }
+
+.modal-cancel {
+  border-radius: 5px;
+  color: red;
+  border-color: red; }
+
+.modal-submit {
+  background-color: green;
+  border-color: green;
+  color: #fff; }
